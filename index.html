@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Focus</title>
+<meta name="description" content="Focus — produtividade gamificada">
+<meta name="theme-color" content="#000000">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Focus">
+<meta name="format-detection" content="telephone=no">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div id="banner" class="banner" hidden></div>
+<main id="view" class="view" tabindex="-1"></main>
+<button id="fab" class="fab" data-a="newTask" hidden aria-label="Nova tarefa">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg><span>Nova tarefa</span>
+</button>
+<nav class="tabbar" id="tabbar" aria-label="Navegação">
+  <button data-tab="inicio" aria-label="Início"><svg viewBox="0 0 24 24"><path d="M4 11l8-6 8 6v8a1 1 0 0 1-1 1h-4v-5h-6v5H5a1 1 0 0 1-1-1z"/></svg><span>Início</span></button>
+  <button data-tab="dia" aria-label="Meu dia"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="3"/><path d="M8 3v4M16 3v4M4 10h16"/></svg><span>Meu dia</span></button>
+  <button data-tab="metas" aria-label="Metas"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r=".6"/></svg><span>Metas</span></button>
+  <button data-tab="evolucao" aria-label="Evolução"><svg viewBox="0 0 24 24"><path d="M5 19V13M10 19V9M15 19v-6M20 19V5"/></svg><span>Evolução</span></button>
+  <button data-tab="ajustes" aria-label="Ajustes"><svg viewBox="0 0 24 24"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2"/><circle cx="10" cy="17" r="2"/></svg><span>Ajustes</span></button>
+</nav>
+<div id="sheetRoot"></div>
+<div id="toasts" class="toasts" aria-live="polite"></div>
+<div id="celebrate" class="celebrate" hidden></div>
+<noscript><p style="padding:24px;color:#fff">O Focus precisa de JavaScript ativado.</p></noscript>
+<script src="app.js"></script>
+</body>
+</html>
